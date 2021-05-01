@@ -1,0 +1,44 @@
+<header class="container mx-auto p-5 text-white">
+  <div class="md:flex md:flex-row md:justify-between justify-center md:items-baseline px-5">
+    <div class="flex flex-row justify-between md:block">
+      <a href="/"><h1 class="font-medium text-lg tracking-tighter">Sycamore Design</h1></a>
+
+      <img
+        id="hamburgerbtn"
+        class="md:hidden h-8 w-8"
+        src="../../img/icons/menu.svg"
+      />
+    </div>
+
+    <nav
+      class="text-center uppercase tracking-wider text-lg font-light hidden md:flex md:flex-row md:items-baseline bg-opacity-40 bg-black md:bg-opacity-0 md:shadow-none rounded-md shadow-lg p-5 mt-5"
+      id="mobileMenu"
+    >
+      <ul class="flex flex-col gap-4 md:flex-row md:gap-8 text-light">
+        <li>
+          <a class="hover:text-indigo-500 hover:underline" href="/services">Services</a>
+        </li>
+        <li>
+          <a class="hover:text-indigo-500 hover:underline" href="/blog">Blog</a>
+        </li>
+        <li>
+          <a class="hover:text-indigo-500 hover:underline" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .active {
+    display: block;
+  }
+</style>
+
+<script>
+  let hamburger = document.getElementById("hamburgerbtn");
+  let mobileMenu = document.getElementById("mobileMenu");
+  hamburger.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+  });
+</script>
